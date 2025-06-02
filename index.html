@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVAR Calculator</title>
+    <meta name="description" content="A calculator for MVAR readings">
+    <meta name="theme-color" content="#004e92">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#electricity" class="nav-link active">MVAR CALCULATE</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Section 1 -->
+        <div id="electricity" class="section-card">
+            <div class="input-group">
+                <label for="previous-reading">MW</label>
+                <input type="text" id="previous-reading" readonly placeholder="Click to enter reading">
+                <div class="numpad" id="numpad-1">
+                    <div class="numpad-grid">
+                        <button class="numpad-btn">1</button>
+                        <button class="numpad-btn">2</button>
+                        <button class="numpad-btn">3</button>
+                        <button class="numpad-btn">4</button>
+                        <button class="numpad-btn">5</button>
+                        <button class="numpad-btn">6</button>
+                        <button class="numpad-btn">7</button>
+                        <button class="numpad-btn">8</button>
+                        <button class="numpad-btn">9</button>
+                        <button class="numpad-btn">.</button>
+                        <button class="numpad-btn">0</button>
+                        <button class="numpad-btn clear">C</button>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="current-reading">MVA</label>
+                <input type="text" id="current-reading" readonly placeholder="Click to enter reading">
+                <div class="numpad" id="numpad-2">
+                    <div class="numpad-grid">
+                        <button class="numpad-btn">1</button>
+                        <button class="numpad-btn">2</button>
+                        <button class="numpad-btn">3</button>
+                        <button class="numpad-btn">4</button>
+                        <button class="numpad-btn">5</button>
+                        <button class="numpad-btn">6</button>
+                        <button class="numpad-btn">7</button>
+                        <button class="numpad-btn">8</button>
+                        <button class="numpad-btn">9</button>
+                        <button class="numpad-btn">.</button>
+                        <button class="numpad-btn">0</button>
+                        <button class="numpad-btn clear">C</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result-area" id="electricity-result">
+                MVAR Reading: <span id="total-units">0</span>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
