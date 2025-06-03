@@ -53,13 +53,13 @@
         {
             "src": "icon/mobile-ss.png",
             "type": "image/png",
-            "sizes": "768x1024",
+            "sizes": "1080x1440",
             "form_factor": "narrow"
         },
         {
             "src": "icon/pc-ss.png",
             "type": "image/png",
-            "sizes": "1365x768",
+            "sizes": "2560x1440",
             "form_factor": "wide"
         }
     ]
