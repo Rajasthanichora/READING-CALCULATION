@@ -1,10 +1,10 @@
 const CACHE_NAME = 'mvar-calculator-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js',
-    '/manifest.json'
+    '/READING-CALCULATION/',
+    '/READING-CALCULATION/index.html',
+    '/READING-CALCULATION/styles.css',
+    '/READING-CALCULATION/script.js',
+    '/READING-CALCULATION/manifest.json'
 ];
 
 // Install Service Worker
