@@ -2,9 +2,11 @@
     "name": "MVAR Calculator",
     "short_name": "MVAR Calc",
     "description": "A calculator for MVAR readings",
-    "start_url": "/READING-CALCULATION/index.html",
-    "scope": "/READING-CALCULATION/",
-    "display": "standalone",
+    // Relative start_url—no leading slash:
+    "start_url": "./index.html",    
+    // Scope relative bhi:
+    "scope": "./",                   
+   "display": "standalone",
     "background_color": "#000428",
     "theme_color": "#004e92",
     "icons": [
